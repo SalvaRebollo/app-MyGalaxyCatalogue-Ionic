@@ -1,0 +1,12 @@
+ion-content{
+    background-image: url('../../assets/galaxy.jpg');
+    background-size: cover;
+}
+
+.Absolute-Center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%;
+    flex-direction: column;
+}

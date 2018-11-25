@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button href="/home">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title *ngIf="todo.producto !== null">
+      <img style="vertical-align: middle;" alt="logo" height="40" src="../../assets/logo.png">
+      {{ todo.producto }}
+    </ion-title>
+
+    <ion-title *ngIf="todo.producto === null">
+      <img style="vertical-align: middle;" alt="logo" height="40" src="../../assets/logo.png">
+      Añadir producto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Nombre del producto</ion-label>
+    <ion-input clearInput [(ngModel)]="todo.producto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-textarea textarea clearInput [(ngModel)]="todo.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Precio</ion-label>
+    <ion-input clearInput type="number" [(ngModel)]="todo.precio"></ion-input>
+  </ion-item>
+  <ion-item>
+    
+
+    <ion-button (click)="setCategoria1('Objetos')" shape="round" [color]="mi_variable1">Objetos</ion-button>
+    <ion-button (click)="setCategoria2('Servicios')" shape="round" [color]="mi_variable2">Servicios</ion-button>
+    <ion-button (click)="setCategoria3('Otros')" shape="round" [color]="mi_variable3">Otros</ion-button>&nbsp;&nbsp;&nbsp;
+
+    
+
+    <ion-icon *ngIf="!star1" name="close" (click)="setMuyDeteriorado1()"></ion-icon>
+    <ion-icon *ngIf="star1" name="sad" (click)="setMuyDeteriorado1()"></ion-icon>
+    <ion-icon *ngIf="!star2" name="close" (click)="setUsado2()"></ion-icon>
+    <ion-icon *ngIf="star2" name="heart-half" (click)="setUsado2()"></ion-icon>
+    <ion-icon *ngIf="!star3" name="close" (click)="setPerfecto3()"></ion-icon>
+    <ion-icon *ngIf="star3" name="happy" (click)="setPerfecto3()"></ion-icon>
+
+  </ion-item>
+
+
+  <ion-button (click)="getPicture()" color="tertiary" expand="full">
+    <ion-icon name="ios-image"></ion-icon>&nbsp;
+    Subir imagen
+  </ion-button>
+  <img [src]="image" *ngIf="image" />
+
+
+
+
+
+
+  <ion-button *ngIf="(todo.precio !== null) && (todo.producto !== null)" (click)="saveTodo(todo)" style="color:green" color="warning" expand="full">
+    
+      <ion-icon name="save"></ion-icon>&nbsp; Guardar
+  </ion-button>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tareas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/edit" routerDirection="forward">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item *ngFor="let t of todos">
+
+
+
+      <ion-label (click)="editTodo(t.id)">
+        {{ t.title }}
+
+        <strong>
+          ({{ t.category }}
+          <ion-icon *ngIf="t.category === 'Personal'" name="person"></ion-icon>
+          <ion-icon *ngIf="t.category === 'Trabajo'" name="briefcase"></ion-icon>
+          <ion-icon *ngIf="t.category === 'Estudios'" name="book"></ion-icon>)
+        </strong>
+
+
+        <ion-icon name="star"></ion-icon>
+        <ion-icon *ngIf="t.stars >= 2" name="star"></ion-icon>
+        <ion-icon *ngIf="t.stars === 3" name="star"></ion-icon>
+      </ion-label>
+
+
+      <ion-icon (click)="deleteDialog(t.title, t.id)" name="trash" color="medium"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="descendiente()">descendiente</ion-button>
+  <ion-button (click)="ascendente()">ascendente</ion-button>
+</ion-content>

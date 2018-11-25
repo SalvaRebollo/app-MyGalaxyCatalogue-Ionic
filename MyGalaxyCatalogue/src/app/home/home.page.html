@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>
+      <img style="vertical-align: middle;" alt="logo" height="40" src="../../assets/logo.png">
+      My Galaxy Catalogue
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/edit" routerDirection="forward">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+  
+  <ion-list lines="full">
+    <ion-item  *ngFor="let t of todos">
+
+      <ion-card >
+        <ion-card-header>
+          <img *ngIf="t.image !== null" (click)="editTodo(t.id)" [src]="t.image">
+          <img *ngIf="t.image === null" (click)="editTodo(t.id)" src="../../assets/productosinfoto.png">
+
+          <ion-card-title (click)="editTodo(t.id)">{{ t.producto }}</ion-card-title>
+          <ion-card-subtitle (click)="editTodo(t.id)" text-center>
+
+            <strong>
+              {{ t.category }}
+
+              <ion-icon *ngIf="t.category === 'Objetos'" name="cube"></ion-icon>
+              <ion-icon *ngIf="t.category === 'Servicios'" name="swap"></ion-icon>
+              <ion-icon *ngIf="t.category === 'Otros'" name="medical"></ion-icon>
+
+              &nbsp;&nbsp;Estado:
+              <ion-icon *ngIf="t.stars === 1" name="sad"></ion-icon>
+              <ion-icon *ngIf="t.stars === 2" name="heart-half"></ion-icon>
+              <ion-icon *ngIf="t.stars === 3" name="happy"></ion-icon>
+
+              &nbsp;&nbsp;Precio:
+              {{t.precio}}€
+            </strong>
+
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          {{ t.description }}
+          <br>
+          <ion-icon (click)="deleteDialog(t.producto, t.id)" name="trash" color="dark"></ion-icon>
+        </ion-card-content>
+
+      </ion-card>
+
+
+
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
