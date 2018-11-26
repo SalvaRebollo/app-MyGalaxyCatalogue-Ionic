@@ -9,4 +9,5 @@
 
 <img width="400px" src="/img/bienvenida.jpg">
 
+#### HOME: Aquí se muestra nuestro catálogo con los productos que hemos ido añadiendo
 <img width="400px" src="/img/home.jpg">
