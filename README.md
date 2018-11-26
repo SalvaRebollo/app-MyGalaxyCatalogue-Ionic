@@ -26,3 +26,7 @@
 
 #### Para borrar un producto pulsamos en el pequeño cubo de basura posicionado en la esquina inferior izquierda de cada elemento:
 <img width="400px" src="/img/modal.jpg">
+
+### Esto ha sido todo, puedes probar la aplicación en tu dispositivo Android descargando el fichero MyGalaxyCatalogue.apk que se encuentra en este repositorio. Gracias por su atención.
+
+#### PD: No olvides ejecutar el comando "npm install" si ejecutar el proyecto desde el navegador.
