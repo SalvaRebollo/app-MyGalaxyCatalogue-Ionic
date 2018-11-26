@@ -19,4 +19,10 @@
 <img width="400px" src="/img/productoedit.jpg">
 
 #### Añadir un producto:
-<img width="400px" src="/img/productohecho.gif">
+<div>
+  <img width="400px" src="/img/productohecho.jpg">
+  <img width="400px" src="/img/agregarproducto.gif">
+</div>
+
+#### Para borrar un producto pulsamos en el pequeño cubo de basura posicionado en la esquina inferior izquierda de cada elemento:
+<img width="400px" src="/img/modal.jpg">
