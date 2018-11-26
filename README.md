@@ -11,6 +11,12 @@
 
 #### HOME: Aquí se muestra nuestro catálogo con los productos que hemos ido añadiendo
 <div>
-<img width="400px" src="/img/home.jpg">
-<img width="400px" src="/img/home.gif">
+  <img width="400px" src="/img/home.jpg">
+  <img width="400px" src="/img/home.gif">
 </div>
+
+#### Cuando pulsamos un producto se nos abre su información para poder modificarla:
+<img width="400px" src="/img/productoedit.jpg">
+
+#### Añadir un producto:
+<img width="400px" src="/img/productohecho.gif">
